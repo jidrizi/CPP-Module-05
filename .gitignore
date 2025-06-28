@@ -1,4 +1,7 @@
 # Non git ignore template stuff
+bin
+.vscode
+settings.json
 Buro
 
 # Prerequisites
