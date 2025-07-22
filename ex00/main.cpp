@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:50 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 14:22:02 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 14:48:34 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << b3 << std::endl;
 
 	try
 	{
@@ -63,6 +64,7 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
+	std::cout << b4 << std::endl;
 
 	try
 	{
