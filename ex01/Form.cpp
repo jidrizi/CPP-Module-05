@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:11:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 16:49:33 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 17:13:14 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ void Form::beSigned(const Bureaucrat &bureaucrat)
 		throw GradeTooLowException();
 	}
 	isSigned = true;
-	std::cout << bureaucrat.getName() << " signed the form " << name << "." << std::endl;
 }
 
 const char *Form::GradeTooHighException::what() const throw()
