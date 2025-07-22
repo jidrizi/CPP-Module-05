@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:44 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 13:58:21 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 14:10:14 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class Bureaucrat
 			public:
 				virtual const char *what() const throw();
 		};
-}
+};
 
 std::ostream &operator<<(std::ostream & os, Bureaucrat const &buro);
 

@@ -6,40 +6,38 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:59 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/15 16:54:55 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 14:32:00 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("default"), _grade(150)
+Bureaucrat::Bureaucrat() : name("default"), grade(150)
 {
 	std::cout << "[Default constructor called]";
 }
 
-Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
+Bureaucrat::Bureaucrat(const std::string _name, int _grade) : name(_name)
 {	
-	if (grade < 1)
+	if (_grade < 1)
 		throw GradeTooHighException();
-	else if (grade > 150)
+	else if (_grade > 150)
 		throw GradeTooLowException();
 	else
-		_grade = grade;
+		grade = _grade;
 }
 
-Bureaucrat::(const Bureaucrat &other)
+
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.grade)
 {
 	std::cout << "[Copy constructor called]";
-	this->name = other.name;
-	this->grade = other.grade;
 }
 
-Bureaucrat &Bureaucrat:operator=(const Bureaucrat &other)
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
-	std::cout << "[Copy assigment called]"
-	if (this != other)
+	std::cout << "[Copy assigment called]";
+	if (this != &other)
 	{
-		this->name = other.name;
 		this->grade = other.grade;
 	}
 	return (*this);
