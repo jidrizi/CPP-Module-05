@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:59 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/06/28 15:04:27 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/15 16:54:55 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,15 @@ Bureaucrat::Bureaucrat() : _name("default"), _grade(150)
 	std::cout << "[Default constructor called]";
 }
 
-//prot constr
+Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
+{	
+	if (grade < 1)
+		throw GradeTooHighException();
+	else if (grade > 150)
+		throw GradeTooLowException();
+	else
+		_grade = grade;
+}
 
 Bureaucrat::(const Bureaucrat &other)
 {
@@ -50,6 +58,16 @@ std::string	Bureaucrat::getName() const
 int	Bureaucrat::getGrade() const
 {
 	return (this->grade);
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Grade too high!");
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Grade too low!");
 }
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &other)
