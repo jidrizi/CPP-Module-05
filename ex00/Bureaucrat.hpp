@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:44 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/15 16:54:15 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 13:58:21 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include <exception>
 
-class Bureaucrat:
+class Bureaucrat
 {
 	private:
 		const std::string	name;
@@ -30,7 +30,7 @@ class Bureaucrat:
 		Bureaucrat &operator=(const Bureaucrat &other);
 		~Bureaucrat();
 
-		std:string	getName() const;
+		std::string	getName() const;
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
