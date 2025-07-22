@@ -6,13 +6,12 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:50 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 14:48:34 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 14:50:52 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-//gere we are requested to provide tests
 int main()
 {
 	std::cout << "[Testing creation with a grade too high and a grade too low]" << std::endl;
