@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:50 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 15:10:03 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 16:51:38 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << "[Testing creation with a grade too high and a grade too low]" << std::endl;
+	std::cout << "\033[31m[Testing creation with a grade too high and a grade too low]]\033[0m" << std::endl;
 	try
 	{
 		Bureaucrat b1("HighGradeTest", -13);
@@ -33,7 +33,7 @@ int main()
 	}
 
 
-	std::cout << std::endl << "[Testing incrementing and decrementing of the grades]" << std::endl;
+	std::cout << std::endl << "\033[31m[Testing incrementing and decrementing of the grades]\033[0m" << std::endl;
 	Bureaucrat b3("IncrementTest", 2);
 	std::cout << b3 << std::endl;
 	try
