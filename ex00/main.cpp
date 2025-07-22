@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:50 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 14:50:52 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 15:10:03 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int main()
 
 	std::cout << std::endl << "[Testing incrementing and decrementing of the grades]" << std::endl;
 	Bureaucrat b3("IncrementTest", 2);
+	std::cout << b3 << std::endl;
 	try
 	{
 		b3.incrementGrade();
@@ -43,7 +44,6 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << b3 << std::endl;
 
 	try
 	{
@@ -53,8 +53,10 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
+
 
 	Bureaucrat b4("DecrementTest", 149);
+	std::cout << b4 << std::endl;
 	try
 	{
 		b4.decrementGrade();
@@ -63,8 +65,7 @@ int main()
 	{
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << b4 << std::endl;
-
+	
 	try
 	{
 		b4.decrementGrade();
