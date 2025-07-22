@@ -2,7 +2,7 @@
 bin
 .vscode
 settings.json
-Buro
+Buro*
 
 # Prerequisites
 *.d

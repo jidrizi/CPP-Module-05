@@ -8,7 +8,7 @@ BIN_DIR = bin
 
 OBJS = $(SRCS:%.cpp=$(BIN_DIR)/%.o)
 
-NAME = Buro
+NAME = Buro2
 
 all: $(NAME)
 

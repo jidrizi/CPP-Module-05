@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:44 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 16:29:44 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 16:33:32 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <exception>
 # include "Form.hpp"
 
-
+class Form;
 
 class Bureaucrat
 {

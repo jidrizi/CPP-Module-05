@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:11:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 16:27:24 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/22 16:49:33 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Form::Form() : name("Default Form"), gradeToSign(150), gradeToExecute(150), isSigned(false) 
 {
-	std::cout << "Form default constructor called." << std::endl;
+	std::cout << "(Form default constructor called.)" << std::endl;
 }
 
 Form::Form(const std::string _name, int _gradeToSign, int _gradeToExecute) : name(_name), gradeToSign(_gradeToSign), gradeToExecute(_gradeToExecute), isSigned(false) 
 {
-	std::cout << "Form parameterized constructor called." << std::endl;
+	std::cout << "(Form parameterized constructor called.)" << std::endl;
 	if (gradeToSign < 1 || gradeToExecute < 1) 
 	{
 		throw GradeTooHighException();
@@ -32,7 +32,7 @@ Form::Form(const std::string _name, int _gradeToSign, int _gradeToExecute) : nam
 
 Form::Form(const Form &other) : name(other.name), gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute), isSigned(other.isSigned) 
 {
-	std::cout << "Form copy constructor called." << std::endl;
+	std::cout << "(Form copy constructor called.)" << std::endl;
 }
 
 Form &Form::operator=(const Form &other) 
@@ -41,13 +41,13 @@ Form &Form::operator=(const Form &other)
 	{
 		isSigned = other.isSigned;
 	}
-	std::cout << "Form assignment operator called." << std::endl;
+	std::cout << "(Form assignment operator called.)" << std::endl;
 	return (*this);
 }
 
 Form::~Form() 
 {
-	std::cout << "Form destructor called." << std::endl;
+	std::cout << "(Form destructor called.)" << std::endl;
 }
 
 const std::string &Form::getName() const 
