@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:11:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/23 13:27:16 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:03:31 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,39 @@ const char *AForm::GradeTooLowException::what() const throw()
 	return ("Grade too low!");
 }
 
+const char *AForm::UnSignedException::what() const throw()
+{
+	return ("Form can not be executed, because it is not signed!");
+}
+
 std::ostream &operator<<(std::ostream &os, const AForm &aform) 
 {
 	os << "AForm Name: " << aform.getName() << ", Grade to Sign: " << aform.getGradeToSign()
 		<< ", Grade to Execute: " << aform.getGradeToExecute() 
 		<< ", Is Signed: " << (aform.getIfIsSigned() ? "Yes" : "No");
 	return (os);
+}
+
+void AForm::setIsSigned(bool is_signed)
+{
+	isSigned = is_signed;
+}
+
+void AForm::beSigned(const Bureaucrat &bureaucrat) 
+{
+	if (bureaucrat.getGrade() > gradeToSign) 
+	{
+		throw GradeTooLowException();
+	}
+	isSigned = true;
+}
+
+void AForm::execute(const Bureaucrat &executor) const
+{
+	if (isSigned == false)
+		throw UnSignedException();
+	if (gradeToExecute < executor.getGrade())
+		throw GradeTooLowException();
+
+	executeAction();
 }
