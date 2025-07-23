@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:59 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 17:03:01 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 15:31:09 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 Bureaucrat::Bureaucrat() : name("default"), grade(150)
 {
-	std::cout << "[Bureaucrat default constructor called]"<< std::endl;
+	
 }
 
 Bureaucrat::Bureaucrat(const std::string _name, int _grade) : name(_name)
 {	
-	std::cout << "[Bureaucrat parameterized constructor called]"<< std::endl;
 	if (_grade < 1)
 		throw GradeTooHighException();
 	else if (_grade > 150)
@@ -31,12 +30,11 @@ Bureaucrat::Bureaucrat(const std::string _name, int _grade) : name(_name)
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : name(other.name), grade(other.grade)
 {
-	std::cout << "[Bureaucrat copy constructor called]"<< std::endl;
+
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
-	std::cout << "[Bureaucrat assignment operator called]"<< std::endl;
 	if (this != &other)
 	{
 		this->grade = other.grade;
@@ -46,7 +44,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "[Bureaucrat destructor called]"<< std::endl;
+	
 }
 
 std::string	Bureaucrat::getName() const

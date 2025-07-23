@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 13:37:00 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/23 14:44:58 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 15:29:51 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137), target("Default") 
 {
-	std::cout << "(ShrubberyCreationForm default constructor called.)" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm("ShrubberyCreationForm", 145, 137), target(target) 
 {
-	std::cout << "(ShrubberyCreationForm parameterized constructor called.)" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : AForm(other), target(other.target) 
 {
-	std::cout << "(ShrubberyCreationForm copy constructor called.)" << std::endl;
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &other)
@@ -36,7 +33,6 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << "(ShrubberyCreationForm destructor called.)" << std::endl;
 }
 
 const char *ShrubberyCreationForm::FileOpenException::what() const throw()

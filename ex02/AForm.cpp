@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:11:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/23 14:46:35 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 15:32:14 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 AForm::AForm() : name("Default AForm"), gradeToSign(150), gradeToExecute(150), isSigned(false) 
 {
-	std::cout << "(AForm default constructor called.)" << std::endl;
 }
 
 AForm::AForm(const std::string _name, int _gradeToSign, int _gradeToExecute) : name(_name), gradeToSign(_gradeToSign), gradeToExecute(_gradeToExecute), isSigned(false) 
 {
-	std::cout << "(AForm parameterized constructor called.)" << std::endl;
 	if (gradeToSign < 1 || gradeToExecute < 1) 
 	{
 		throw GradeTooHighException();
@@ -32,7 +30,6 @@ AForm::AForm(const std::string _name, int _gradeToSign, int _gradeToExecute) : n
 
 AForm::AForm(const AForm &other) : name(other.name), gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute), isSigned(other.isSigned) 
 {
-	std::cout << "(AForm copy constructor called.)" << std::endl;
 }
 
 AForm &AForm::operator=(const AForm &other) 
@@ -41,13 +38,11 @@ AForm &AForm::operator=(const AForm &other)
 	{
 		isSigned = other.isSigned;
 	}
-	std::cout << "(AForm assignment operator called.)" << std::endl;
 	return (*this);
 }
 
 AForm::~AForm() 
 {
-	std::cout << "(AForm destructor called.)" << std::endl;
 }
 
 const std::string &AForm::getName() const 
@@ -82,7 +77,7 @@ const char *AForm::GradeTooLowException::what() const throw()
 
 const char *AForm::UnSignedException::what() const throw()
 {
-	return ("Form can not be executed, because it is not signed!");
+	return ("Form is not signed!");
 }
 
 std::ostream &operator<<(std::ostream &os, const AForm &aform) 
