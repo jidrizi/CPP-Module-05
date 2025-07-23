@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:11:33 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/22 16:33:21 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 13:26:38 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include <iostream>
 # include <string>
@@ -20,7 +20,7 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 		const std::string	name;
@@ -29,17 +29,17 @@ class Form
 		bool				isSigned;
 	
 	public:
-		Form();
-		Form(const std::string name, int gradeToSign, int gradeToExecute);
-		Form(const Form &other);
-		Form &operator=(const Form &other);
-		~Form();
+		AForm();
+		AForm(const std::string name, int gradeToSign, int gradeToExecute);
+		AForm(const AForm &other);
+		AForm &operator=(const AForm &other);
+		~AForm();
 		
 		const std::string	&getName() const;
 		int					getGradeToSign() const;
 		int					getGradeToExecute() const;
 		bool				getIfIsSigned() const;
-		void				beSigned(const Bureaucrat &bureaucrat);
+		virtual void		beSigned(const Bureaucrat &bureaucrat) = 0;
 		
 		class GradeTooHighException : public std::exception
 		{
@@ -54,6 +54,6 @@ class Form
 		};
 };
 
-std::ostream &operator <<(std::ostream &os, const Form &form);
+std::ostream &operator <<(std::ostream &os, const AForm &aform);
 
 #endif
