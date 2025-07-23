@@ -3,6 +3,7 @@ bin
 .vscode
 settings.json
 Buro*
+*_shrubbery
 
 # Prerequisites
 *.d

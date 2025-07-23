@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:59 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/23 13:14:38 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:44:05 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,19 @@ void	Bureaucrat::signForm(AForm &aform) const
 		return ;
 	}
 	std::cout << this->getName() << " signed " << aform.getName() << std::endl;
+}
+
+void Bureaucrat::executeForm(const AForm &aform)
+{
+	try
+	{
+		aform.execute(*this);
+		std::cout << name << " executed " << aform.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}	
 }
 
 std::ostream &operator<<(std::ostream &os, Bureaucrat const &other)

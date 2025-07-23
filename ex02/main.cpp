@@ -6,14 +6,29 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 14:33:50 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/23 13:24:39 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:35:08 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main(void)
 {
-	return (0);
+	srand(time(NULL));
+
+
+	std::cout << "\033[33m" << std::endl << "Test ex02" << "\033[0m" << std::endl;
+
+	std::cout << "\033[33m" << std::endl << "Test ex02 ShrubberyCreationForm" << "\033[0m" << std::endl;
+	Bureaucrat Mr_Shrubby("Mr_Shrubby", 130);
+	ShrubberyCreationForm Shrubby_form("Hello");
+	std::cout << std::endl;
+	std::cout << Shrubby_form;
+	Mr_Shrubby.signForm(Shrubby_form);
+	std::cout << Shrubby_form;
+	Mr_Shrubby.executeForm(Shrubby_form);
 }

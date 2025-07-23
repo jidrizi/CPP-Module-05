@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:11:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/07/23 14:03:31 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/07/23 14:46:35 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ const char *AForm::UnSignedException::what() const throw()
 
 std::ostream &operator<<(std::ostream &os, const AForm &aform) 
 {
-	os << "AForm Name: " << aform.getName() << ", Grade to Sign: " << aform.getGradeToSign()
+	os << "Form Name: " << aform.getName() << ", Grade to Sign: " << aform.getGradeToSign()
 		<< ", Grade to Execute: " << aform.getGradeToExecute() 
-		<< ", Is Signed: " << (aform.getIfIsSigned() ? "Yes" : "No");
+		<< ", Is Signed: " << (aform.getIfIsSigned() ? "Yes" : "No") << std::endl;
 	return (os);
 }
 
