@@ -6,11 +6,11 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/08 19:33:50 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/08 21:28:31 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Bureaucrat.hpp"
 
 int	main()
 {

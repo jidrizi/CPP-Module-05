@@ -1,6 +1,6 @@
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iincludes
 
 NAME = Buro
 
@@ -12,16 +12,16 @@ SRCS = $(SRCDIR)main.cpp $(SRCDIR)Bureaucrat.cpp
 
 BIN_DIR = bin
 
+OBJS = $(SRCS:$(SRCDIR)%.cpp=$(BIN_DIR)/%.o)
+
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-OBJS = $(SRCS:$(SRCDIR)%.cpp=$(BIN_DIR)/%.o)
-
 $(BIN_DIR)/%.o: $(SRCDIR)%.cpp | $(BIN_DIR)
-
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -rf $(BIN_DIR)
