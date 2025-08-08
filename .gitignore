@@ -1,3 +1,7 @@
+# Non git ignore template stuff
+bin
+Buro*
+
 # Prerequisites
 *.d
 
