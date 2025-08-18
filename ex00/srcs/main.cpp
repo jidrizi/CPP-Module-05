@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/18 23:49:16 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/18 23:52:03 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main()
 	
 	try
 	{
-		Bureaucrat	IncrementTest("IncrementTest", 150);
+		Bureaucrat	IncrementTest("IncrementTest", 1);
 		IncrementTest.incrementGrade();
 	}
 	catch(const std::exception& excp)
