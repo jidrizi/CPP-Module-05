@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:35 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/18 23:16:09 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/18 23:19:21 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,16 @@ void				Bureaucrat::incrementGrade()
 {
 	if (this->grade > 1)
 		this-> grade -= 1;
+	else
+		throw (GradeTooHighException());
 }
 
 void				Bureaucrat::decrementGrade()
 {
 	if (this->grade < 150)
 		this-> grade += 1;
+	else
+		throw (GradeTooLowException());
 }
 
 
