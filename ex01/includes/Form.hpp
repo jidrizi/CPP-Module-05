@@ -6,14 +6,17 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 23:57:01 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 00:38:52 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 00:55:26 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 
-#include <iostream>
+# include <string>
+# include <iostream>
+# include <exception>
+
 
 class	Form
 {
@@ -31,6 +34,12 @@ class	Form
 		Form(Form &source);
 		Form	&operator=(Form &source);
 		~Form();
+
+	// functions
+		const std::string	getName();
+		bool				getSignedStatus();
+		const int			getGrade2Sign();
+		const int			getGrade2Exec();
 	
 	// exception classes
 		class	GradeTooHighException : public std::exception
@@ -45,5 +54,9 @@ class	Form
 		};
 	
 };
+
+
+// << overload
+	std::ostream&	operator<<(std::ostream& os, const Form& form);
 
 #endif
