@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/18 23:52:03 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 04:06:20 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ int	main()
 	{
 		std::cerr << excp.what() << std::endl;
 	}
-	return(0);
+	return (0);
 }
