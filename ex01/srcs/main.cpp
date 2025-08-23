@@ -6,13 +6,26 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 00:27:31 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 02:40:36 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-
+int main()
+{
+	std::cout << "\033[1;31m*Testing Constructor*\033[0m" << std::endl;
+	try
+	{
+		Form a("a", false, -1, 30);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	return (0);
+}
 
 
 

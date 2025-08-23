@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 00:10:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 01:24:29 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 02:55:48 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // constructors
 Form::Form() : name("Default"), signedStatus(false), grade2sign(150), grade2exec(150)
 {
-	std::cout << "(Default Form constructor called )" << std::endl;
+	std::cout << "(Default Form constructor called)" << std::endl;
 }
 
 Form::Form(const std::string _name, bool _signedStatus, const int _grade2sign, const int _grade2exec)
@@ -41,18 +41,10 @@ Form&	Form::operator=(Form &source)
 	return (*this);
 }
 
-// exception functions
-const char	*Bureaucrat::GradeTooHighException::what() const throw()
+Form::~Form()
 {
-	return ("Error: Grade is too high.\n");
+	std::cout << "(Form destructor called)";
 }
-
-const char	*Bureaucrat::GradeTooLowException::what() const throw()
-{
-	return ("Error:Grade is too low.\n");
-}
-
-
 
 //functions
 
@@ -65,19 +57,40 @@ bool				Form::getSignedStatus()
 {
 	return (this->signedStatus);
 }
-const int			Form::getGrade2Sign()
+int			Form::getGrade2Sign()
 {
 	return (this->grade2sign);
 }
-const int			Form::getGrade2Exec()
+int			Form::getGrade2Exec()
 {
 	return (this->grade2exec);
 }
 
-std::ostream&	operator<<(std::ostream& os, const Form& form)
+void	Form::beSigned(Bureaucrat buro)
 {
-	os << form.getName << "\tsigned status:" << form.getSignedStatus
-	<< "\tgrade2sign:" << form.grade2sign << "\tgrade2exec:" form.grade2exec
+	if (buro.getGrade() < this->grade2sign)
+	throw (GradeTooLowException());
+	else
+	this->signedStatus = true;
+}
+
+std::ostream&	operator<<(std::ostream& os, Form& form)
+{
+	os << "Name:" << form.getName() 
+	<< "\tsigned status:" << form.getSignedStatus()
+	<< "\tgrade2sign:" << form.getGrade2Sign() 
+	<< "\tgrade2exec:" << form.getGrade2Exec()
 	<< std::endl;
 	return (os);
+}
+
+// exception functions
+const char	*Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Error: Grade is too high.\n");
+}
+
+const char	*Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Error:Grade is too low.\n");
 }

@@ -2,7 +2,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iincludes
 
-NAME = Buro
+NAME = Buro2
 
 all: $(NAME)
 

@@ -6,17 +6,20 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 23:57:01 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 00:55:26 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 02:56:10 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 
+# include "Bureaucrat.hpp"
 # include <string>
 # include <iostream>
 # include <exception>
 
+
+class Bureaucrat;
 
 class	Form
 {
@@ -38,10 +41,12 @@ class	Form
 	// functions
 		const std::string	getName();
 		bool				getSignedStatus();
-		const int			getGrade2Sign();
-		const int			getGrade2Exec();
+		int					getGrade2Sign();
+		int					getGrade2Exec();
+		void				beSigned(Bureaucrat buro);
 	
-	// exception classes
+		// exception classes
+
 		class	GradeTooHighException : public std::exception
 		{
 			public:
@@ -52,11 +57,10 @@ class	Form
 			public:
 				virtual const char	*what() const throw();
 		};
-	
 };
 
 
 // << overload
-	std::ostream&	operator<<(std::ostream& os, const Form& form);
+std::ostream&	operator<<(std::ostream& os, Form& form);
 
 #endif
