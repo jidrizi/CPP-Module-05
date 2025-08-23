@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 00:10:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 02:55:48 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 03:11:07 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Form&	Form::operator=(Form &source)
 
 Form::~Form()
 {
-	std::cout << "(Form destructor called)";
+	std::cout << "(Form destructor called)" << std::endl;
 }
 
 //functions
@@ -68,10 +68,10 @@ int			Form::getGrade2Exec()
 
 void	Form::beSigned(Bureaucrat buro)
 {
-	if (buro.getGrade() < this->grade2sign)
-	throw (GradeTooLowException());
+	if (buro.getGrade() > this->grade2sign)
+		throw (GradeTooLowException());
 	else
-	this->signedStatus = true;
+		this->signedStatus = true;
 }
 
 std::ostream&	operator<<(std::ostream& os, Form& form)
@@ -85,12 +85,12 @@ std::ostream&	operator<<(std::ostream& os, Form& form)
 }
 
 // exception functions
-const char	*Bureaucrat::GradeTooHighException::what() const throw()
+const char	*Form::GradeTooHighException::what() const throw()
 {
 	return ("Error: Grade is too high.\n");
 }
 
-const char	*Bureaucrat::GradeTooLowException::what() const throw()
+const char	*Form::GradeTooLowException::what() const throw()
 {
 	return ("Error:Grade is too low.\n");
 }

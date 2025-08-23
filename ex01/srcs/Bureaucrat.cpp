@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:35 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 01:43:22 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 03:11:26 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,12 @@ void	Bureaucrat::signForm(Form& form)
 	try
 	{
 		form.beSigned(*this);
-		std::cout << this->getName() << " signed" << form.getName();
+		std::cout << this->getName() << " signed " << form.getName() << std::endl;
 	}
 	catch(const std::exception& excp)
 	{
 		std::cerr << this->getName() << " couldn’t sign " << form.getName() 
-			<< "because grade is too low" << std::endl;
+			<< " because grade is too low" << std::endl;
 	}
 }
 
