@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:39 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 03:46:07 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 01:23:46 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ class	Bureaucrat
 		
 		//functions
 		
-		const std::string	getName();
+		const std::string	getName() const;
 		int					getGrade() const;
 		void				incrementGrade();
 		void				decrementGrade();
 		void				signForm(AForm& form);
+		void				executeForm(AForm const & form) const;
 
 		// exception classes
 

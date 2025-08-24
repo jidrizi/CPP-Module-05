@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/25 01:11:16 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 01:25:22 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int main()
 	try
 	{
 		ShrubberyCreationForm	a("trees.shrubbery");
-		Bureaucrat				b("b", 138);
+		Bureaucrat				b("b", 2);
 		b.signForm(a);
-		a.execute(b);
+		b.executeForm(a);
 		std::cout << "Shrubbery success\n";
 	}
 	catch(const std::exception& e)
@@ -36,9 +36,9 @@ int main()
 	try
 	{
 		RobotomyRequestForm	c("cop");
-		Bureaucrat			d("d", 4);
+		Bureaucrat			d("d", 2);
 		d.signForm(c);
-		c.execute(d);
+		d.executeForm(c);
 	}
 	catch(const std::exception& e)
 	{
@@ -49,9 +49,9 @@ int main()
 	try
 	{
 		PresidentialPardonForm	islandMan("IslandMan");
-		Bureaucrat				vicePresident("VicePresident", 0);
+		Bureaucrat				vicePresident("VicePresident", 2);
 		vicePresident.signForm(islandMan);
-		islandMan.execute(vicePresident);
+		vicePresident.executeForm(islandMan);
 	}
 	catch(const std::exception& e)
 	{

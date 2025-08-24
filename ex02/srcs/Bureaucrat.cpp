@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:35 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 03:46:20 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 01:25:36 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Bureaucrat::~Bureaucrat()
 }
 
 
-const std::string	Bureaucrat::getName()
+const std::string	Bureaucrat::getName() const
 {
 	return (this->name);
 }
@@ -85,6 +85,19 @@ void	Bureaucrat::signForm(AForm& form)
 	{
 		std::cerr << this->getName() << " couldn’t sign " << form.getName() 
 			<< " because grade is too low" << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->getName() << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		return ;
 	}
 }
 
