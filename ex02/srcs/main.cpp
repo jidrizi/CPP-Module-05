@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 05:34:50 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 05:36:50 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main()
 		Bureaucrat				b("b", 138);
 		b.signForm(a);
 		a.execute(b);
-		std::cout << "success\n";
+		std::cout << "Shrubbery success\n";
 	}
 	catch(const std::exception& e)
 	{
