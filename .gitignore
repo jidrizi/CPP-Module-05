@@ -1,6 +1,7 @@
 # Non git ignore template stuff
 bin
 Buro*
+*.shrubbery
 
 # Prerequisites
 *.d

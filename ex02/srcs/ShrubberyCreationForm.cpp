@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 04:55:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 04:58:07 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 05:07:29 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,18 @@ void	ShrubberyCreationForm::subFormAction() const
 		<< std::endl;
 	}
 	
-	targetFile << "  .-'- -.\n"
-			   << "  (       )\n" 
-			   << "(  ,      )\n"
-			   << "( \\'./  .'\n"
-			   << "  '-| |-'\n"
-			   << "    | |\n"
-			   << ",,,,|_|,,,";
+	targetFile	<< "   oxoxoo    ooxoo\n"
+				<< " ooxoxo oo  oxoxooo\n"
+				<< "oooo xxoxoo ooo ooox\n"
+				<< "oxo o oxoxo  xoxxoxo\n"
+				<< " oxo xooxoooo o ooo\n"
+				<< "   ooo\\oo\\  /o/o\n"
+				<< " 	  \\  \\/ /\n"
+				<< " 	   |   /\n"
+				<< " 	   |  |\n"
+				<< " 	   | D|\n"
+				<< " 	   |  |\n"
+				<< " 	   |  |\n"
+				<< "______/____\\____\n";
 	targetFile.close();
 }

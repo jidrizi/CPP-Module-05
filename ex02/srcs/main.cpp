@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 04:58:41 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 05:00:56 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ int main()
 	try
 	{
 		std::cout << "\033[1;31m*Testing Shrubbery formr*\033[0m" << std::endl;
-		ShrubberyCreationForm	a("trees");
-		Bureaucrat				b("b", 140);
+		ShrubberyCreationForm	a("trees.shrubbery");
+		Bureaucrat				b("b", 110);
 		b.signForm(a);
 		a.execute(b);
+		std::cout << "success\n";
 	}
 	catch(std::exception &e)
 	{
