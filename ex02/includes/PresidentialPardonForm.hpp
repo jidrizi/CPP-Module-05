@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/24 05:42:51 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/25 00:49:02 by jidrizi          ###   ########.fr       */
+/*   Created: 2025/08/25 01:02:07 by jidrizi           #+#    #+#             */
+/*   Updated: 2025/08/25 01:05:28 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#ifndef PRESIDENTALPARDONFORM_HPP
+# define PRESIDENTALPARDONFORM_HPP
 
-# include "AForm.hpp"
+#include "AForm.hpp"
 
-class RobotomyRequestForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 	private:
 		std::string	target;
 	
 	public:
-	// constructors
-		RobotomyRequestForm();
-		RobotomyRequestForm(std::string target);
-		RobotomyRequestForm(RobotomyRequestForm& source);
-		RobotomyRequestForm&	operator=(RobotomyRequestForm& source);
-		~RobotomyRequestForm();
-
-	// functions
-		void			subFormAction() const;
+	//constructors
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(PresidentialPardonForm& source);
+		PresidentialPardonForm& operator=(PresidentialPardonForm& source);
+		~PresidentialPardonForm();
+	
+	//functions
+		virtual void	subFormAction() const;	
 };
 
 #endif

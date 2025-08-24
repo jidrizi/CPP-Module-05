@@ -6,16 +6,24 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 04:55:13 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 05:07:29 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 00:41:30 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
+ShrubberyCreationForm::ShrubberyCreationForm() : 
+	AForm("ShrubberyCreationForm", false, 145, 137), target("defaultTarget")
+{
+	std::cout << "Default ShrubberyCreationForm constructor called"
+		 << std::endl;
+}
+
 ShrubberyCreationForm::ShrubberyCreationForm(std::string _target) : 
 	AForm("ShrubberyCreationForm", false, 145, 137), target(_target)
 {
-	std::cout << "(ShrubberyCreationForm constructor called.)" << std::endl;
+	std::cout << "(ShrubberyCreationForm constructor with parameters called.)" 
+		<< std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm& source) :
@@ -26,7 +34,8 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm& source) :
 
 ShrubberyCreationForm&	ShrubberyCreationForm::operator=(ShrubberyCreationForm& source)
 {
-	std::cout << "(Copy ShrubberyCreationForm assignment operator called)" << std::endl;
+	std::cout << "(Copy ShrubberyCreationForm assignment operator called)" 
+		<< std::endl;
 	if (this != &source)
 	{
  		AForm::operator=(source);

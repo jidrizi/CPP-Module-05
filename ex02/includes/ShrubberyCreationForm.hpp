@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 04:24:59 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 03:57:30 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 00:37:28 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ShrubberyCreationForm : public AForm
 		std::string	target;
 	public:
 	//constructors
+		ShrubberyCreationForm();
 		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(ShrubberyCreationForm &source);
 		ShrubberyCreationForm&	operator=(ShrubberyCreationForm &source);

@@ -9,7 +9,8 @@ all: $(NAME)
 SRCDIR = srcs/
 
 SRCS = $(SRCDIR)main.cpp $(SRCDIR)Bureaucrat.cpp $(SRCDIR)AForm.cpp \
-		$(SRCDIR)ShrubberyCreationForm.cpp \
+		$(SRCDIR)ShrubberyCreationForm.cpp $(SRCDIR)RobotomyRequestForm.cpp\
+		$(SRCDIR)PresidentialPardonForm.cpp
 
 BIN_DIR = bin
 
