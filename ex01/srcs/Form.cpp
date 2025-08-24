@@ -6,17 +6,13 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 00:10:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 03:53:58 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/23 04:54:50 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
 // constructors
-Form::Form() : name("Default"), signedStatus(false), grade2sign(150), grade2exec(150)
-{
-	std::cout << "(Default Form constructor called)" << std::endl;
-}
 
 Form::Form(const std::string _name, bool _signedStatus, const int _grade2sign, const int _grade2exec)
 	: name(_name), signedStatus(_signedStatus), grade2sign(_grade2sign), grade2exec(_grade2exec)
