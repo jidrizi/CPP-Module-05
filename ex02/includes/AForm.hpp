@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 23:57:01 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 04:01:54 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 02:29:07 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class	AForm
 		int					getGrade2Sign();
 		int					getGrade2Exec();
 		void				beSigned(Bureaucrat buro);
+		virtual void		execute(Bureaucrat const & executor) const = 0;
 	
 		// exception classes
 
@@ -53,6 +54,11 @@ class	AForm
 				virtual const char	*what() const throw();
 		};
 		class	GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
+		class	UnsignedFormException : public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();

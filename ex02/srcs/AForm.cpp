@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 00:10:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 04:01:12 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 02:28:54 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,9 @@ const char	*AForm::GradeTooHighException::what() const throw()
 const char	*AForm::GradeTooLowException::what() const throw()
 {
 	return ("Error:Grade is too low.\n");
+}
+
+const char	*AForm::UnsignedFormException::what() const throw()
+{
+	return ("Error:The form being executed in not signed\n");
 }
