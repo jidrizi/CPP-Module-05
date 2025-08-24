@@ -2,7 +2,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iincludes
 
-NAME = Buro2
+NAME = Buro3
 
 all: $(NAME)
 
@@ -10,7 +10,6 @@ SRCDIR = srcs/
 
 SRCS = $(SRCDIR)main.cpp $(SRCDIR)Bureaucrat.cpp $(SRCDIR)AForm.cpp \
 		$(SRCDIR)ShrubberyCreationForm.cpp \
-		$(SRCDIR)RobotomyRequestForm.cpp $(SRCDIR)PresidentialPardonForm.cpp \
 
 BIN_DIR = bin
 

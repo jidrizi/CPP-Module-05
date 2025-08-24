@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 23:57:01 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 02:29:07 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 04:39:34 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "Bureaucrat.hpp"
 # include <string>
 # include <iostream>
+# include <fstream>
 # include <exception>
 
 
@@ -44,7 +45,8 @@ class	AForm
 		int					getGrade2Sign();
 		int					getGrade2Exec();
 		void				beSigned(Bureaucrat buro);
-		virtual void		execute(Bureaucrat const & executor) const = 0;
+		void				execute(Bureaucrat const & executor) const;
+		virtual void		subFormAction() const = 0;
 	
 		// exception classes
 

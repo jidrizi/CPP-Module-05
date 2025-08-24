@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:35 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 03:11:26 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 03:46:20 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ const std::string	Bureaucrat::getName()
 	return (this->name);
 }
 
-int					Bureaucrat::getGrade()
+int					Bureaucrat::getGrade() const
 {
 	return (this->grade);
 }
@@ -74,7 +74,7 @@ void				Bureaucrat::decrementGrade()
 		throw (GradeTooLowException());
 }
 
-void	Bureaucrat::signForm(Form& form)
+void	Bureaucrat::signForm(AForm& form)
 {
 	try
 	{

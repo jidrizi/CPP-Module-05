@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 00:10:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 02:28:54 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 04:51:36 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,15 @@ void	AForm::beSigned(Bureaucrat buro)
 		throw (GradeTooLowException());
 	else
 		this->signedStatus = true;
+}
+
+void	AForm::execute(Bureaucrat const & executor) const
+{
+	if (this->signedStatus == false)
+		throw (UnsignedFormException());
+	if (executor.getGrade() > this->grade2exec)
+		throw (GradeTooLowException());
+	subFormAction();
 }
 
 std::ostream&	operator<<(std::ostream& os, AForm& form)

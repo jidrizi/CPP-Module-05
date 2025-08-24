@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:39 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 02:56:04 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 03:46:07 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <string>
 # include <iostream>
 # include <exception>
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class	Bureaucrat
 {
@@ -38,10 +38,10 @@ class	Bureaucrat
 		//functions
 		
 		const std::string	getName();
-		int					getGrade();
+		int					getGrade() const;
 		void				incrementGrade();
 		void				decrementGrade();
-		void				signForm(Form& form);
+		void				signForm(AForm& form);
 
 		// exception classes
 

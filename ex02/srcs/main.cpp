@@ -6,15 +6,28 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/23 04:06:41 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/24 04:58:41 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
+	try
+	{
+		std::cout << "\033[1;31m*Testing Shrubbery formr*\033[0m" << std::endl;
+		ShrubberyCreationForm	a("trees");
+		Bureaucrat				b("b", 140);
+		b.signForm(a);
+		a.execute(b);
+	}
+	catch(std::exception &e)
+	{
+		return (0);
+	}
 	return (0);
 }
 
