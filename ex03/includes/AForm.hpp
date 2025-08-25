@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 23:57:01 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/25 00:55:39 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 02:22:36 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class	AForm
 		~AForm();
 
 	// functions
-		const std::string	getName();
+		const std::string	getName() const;
 		bool				getSignedStatus();
 		int					getGrade2Sign();
 		int					getGrade2Exec();

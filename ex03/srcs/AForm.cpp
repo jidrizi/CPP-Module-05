@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 00:10:02 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/24 04:51:36 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 02:22:43 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ AForm::~AForm()
 
 //functions
 
-const std::string	AForm::getName()
+const std::string	AForm::getName() const
 {
 	return (this->name);
 }
