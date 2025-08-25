@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 18:08:43 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/25 01:25:22 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 02:15:20 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 int main()
 {
+	srand(time(0));
 	std::cout << "\033[1;31mTesting Shrubbery form\033[0m" << std::endl;
 	try
 	{

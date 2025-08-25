@@ -6,7 +6,7 @@
 /*   By: jidrizi <jidrizi@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 00:19:55 by jidrizi           #+#    #+#             */
-/*   Updated: 2025/08/25 00:55:59 by jidrizi          ###   ########.fr       */
+/*   Updated: 2025/08/25 02:15:09 by jidrizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void	RobotomyRequestForm::subFormAction() const
 {
-	srand(time(0));
 	int rng = rand() % 2;
 
 	if (rng == 1)
